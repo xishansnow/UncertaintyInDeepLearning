@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Chapter01-TheImportanceOfUncertainty
+- file: Chapter02-TheLanguageOfUncertainty
+- file: Chapter03-BayesianDeepLearning
+- file: Chapter04-UncertaintyQuality
+- file: Chapter05-Applications 
+- file: Chapter06-DeepInsights
+- file: Chapter07-FutureResearch
