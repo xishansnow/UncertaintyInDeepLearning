@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: abstract
 - file: Chapter01-TheImportanceOfUncertainty
 - file: Chapter02-TheLanguageOfUncertainty
 - file: Chapter03-BayesianDeepLearning
