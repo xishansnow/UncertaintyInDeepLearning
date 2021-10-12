@@ -66,6 +66,10 @@ latex:
   use_jupyterbook_latex     : true # use jupyterbook-latex for pdf builds as default
 
 #######################################################################################
+# Reference Definition
+bibtex_bibfiles:  
+  - references.bib
+#######################################################################################
 # Launch button settings
 launch_buttons:
   notebook_interface        : "jupyterlab"  # The interface interactive links will activate ["classic", "jupyterlab"]
@@ -85,7 +89,17 @@ sphinx:
   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
+    bibtex_reference_style: author_year
     html_theme:   'sphinx_book_theme'
     mathjax_path: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+    mathjax_config:
+      TeX:
+        Macros:
+          vector: ["\\vec{#1}", 1]
+          uvec: ["\\hat{#1}", 1]
+          mag: ["\\lVert#1\\rVert", 1]
+          cross: "\\times"
+          unit: ["#1~\\mathrm{#2}", 2]
+
 
      

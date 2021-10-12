@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"vector": ["\\vec{#1}", 1], "uvec": ["\\hat{#1}", 1], "mag": ["\\lVert#1\\rVert", 1], "cross": "\\times", "unit": ["#1~\\mathrm{#2}", 2]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="第 2 章 不确定性的语言" href="Chapter02-TheLanguageOfUncertainty.html" />
-    <link rel="prev" title="封面" href="intro.html" />
+    <link rel="prev" title="摘要" href="abstract.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,6 +92,11 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="abstract.html">
+   摘要
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    第 1 章 不确定性的重要性
@@ -123,6 +130,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter07-FutureResearch.html">
    第 7 章 未来的研究
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
   </a>
  </li>
 </ul>
@@ -207,6 +219,73 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   1.1 深度学习
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   1.2 模型的不确定性
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ai">
+   1.3 模型不确定性与 AI 安全
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     1.3.1 医生诊断患者
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     1.3.2 自动驾驶汽车
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     1.3.3 关键系统和高频交易
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   1.4 模型不确定性的应用
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     1.4.1 主动学习
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     1.4.2 深度强化学习中的高效探索
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   1.5 深度学习中的模型不确定性
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   1.6 论文结构
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -217,6 +296,139 @@
                 
   <div class="section" id="id1">
 <h1>第 1 章 不确定性的重要性<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>在贝叶斯机器学习社区，我们使用概率模型和不确定性。类似高斯过程的概率模型被用于从观测到的数据中学习更有可能和不太可能的方法来进行泛华。机器学习的这种概率观点为数据分析和决策提供了信念边界，例如生物学家用来分析其数据，或者自动驾驶汽车用于决定是否刹车。在分析数据或做出决策时，通常需要能够判断模型对其输出的确定程度，能够询问“我是否需要使用更多样化的数据？或改变模型？或者在做决定时要小心？”。这些问题是贝叶斯机器学习要解答的基本问题，并且在该领域得到了广泛的研究 [Ghahramani, 2015]。另一方面，当使用深度学习模型时 <span id="id2">[<a class="reference internal" href="bibliography.html#id57">Goodfellow <em>et al.</em>, 2016</a>]</span>，我们通常只有手头的参数和预测的点估计。使用此类模型迫使我们牺牲我们的工具来回答上述问题，这可能导致我们无法判断模型是在做出明智的预测还是只是随机猜测的情况</p>
+<p>在贝叶斯机器学习界，我们在工作中使用概率模型和不确定性。高斯过程等模型定义了函数的概率分布，被用来从观测到的数据中学习归纳出更有可能和更不可能的方法。这种机器学习的概率观点为数据分析和决策提供了信念边界，例如，生物学家会依靠这些信息来分析其数据，或者一辆自动驾驶汽车会利用这些信息来决定是否刹车。在分析数据或做决策时，往往需要能够判断一个模型对其输出是否确定，能够问：”也许我需要使用更多不同的数据，或者改变模型，或者在做决定时也许要小心一些”。另一方面，当使用深度学习模型时<span id="id3">[<a class="reference internal" href="bibliography.html#id57">Goodfellow <em>et al.</em>, 2016</a>]</span>，我们通常只有参数和预测的点估计。使用此类模型迫使我们牺牲贝叶斯工具来回答上述问题，有可能导致我们无法判断一个模型是在进行合理的预测，还是只是在随机猜测。</p>
+<p>大多数深度学习模型通常被视为确定性函数，因此被视为在一个与拥有不确定性信息的概率模型非常不同的环境中运行。也许正是因为这个原因，看到现代深度学习与概率模型的关系如此密切是非常令人惊讶的。事实上，我们将看到，我们可以从现有的深度学习模型中免费获得不确定性信息，而无需改变任何事情。本文的主要目标是开发这样的实用工具来推断深度学习中的不确定性。</p>
+<div class="section" id="id4">
+<h2>1.1 深度学习<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>为了介绍深度学习，我将从最简单的统计工具开始：线性回归[Gauss, 1809; Legendre, 1805; Seal, 1967] 。在线性回归中，我们得到一组 <span class="math notranslate nohighlight">\(N\)</span> 个输入-输出对 <span class="math notranslate nohighlight">\(\left\{\left(\mathbf{x}_{1}, \mathbf{y}_{1}\right), \ldots,\left(\mathbf{x}_{N}, \mathbf{y}_{N}\right)\right\}\)</span>，例如二氧化碳<span class="math notranslate nohighlight">\(\mathrm{CO}_{2}\)</span> -温度观测值，或者不同驾驶速度下的平均事故数。我们假设存在一个线性函数，将每个 <span class="math notranslate nohighlight">\(\mathbf{x}_{i} \in \mathbb{R}^{Q}\)</span> 映射到 <span class="math notranslate nohighlight">\(\mathbf{y}_{i} \in \mathbb{R}^{D}\)</span> （<span class="math notranslate nohighlight">\(\mathbf{y}_{i}\)</span> 有可能被观测噪声破坏）。在这种情况下，我们的模型是输入的线性转换：<span class="math notranslate nohighlight">\(\mathbf{f}(\mathbf{x})=\mathbf{x} \mathbf{W}+\mathbf{b}\)</span>，其中 <span class="math notranslate nohighlight">\(\mathbf{W}\)</span> 是一个 <span class="math notranslate nohighlight">\(Q\)</span> 乘 <span class="math notranslate nohighlight">\(D\)</span> 的矩阵，<span class="math notranslate nohighlight">\(\mathbf{b}\)</span> 为含 <span class="math notranslate nohighlight">\(D\)</span> 个元素的实数向量。不同的参数 <span class="math notranslate nohighlight">\(\mathbf{W}, \mathbf{b}\)</span> 定义了不同的线性变换，我们的目的是找到参数，例如，使我们观测到的数据的平均平方误差最小：<span class="math notranslate nohighlight">\(\frac{1}{N} \sum_{i}\left\|\mathbf{y}_{i}-\left(\mathbf{x}_{i} \mathbf{W}+\mathbf{b}\right)\right\|^{2}\)</span>。</p>
+<p>在更普遍的情况下，<span class="math notranslate nohighlight">\(\mathrm{x}\)</span> 与 <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> 之间的关系不需要是线性的，我们可能希望定义一个非线性函数 <span class="math notranslate nohighlight">\(\mathbf{f}(\mathbf{x})\)</span> 来映射输入和输出。为此，我们可以采用线性基函数回归[Bishop, 2006; Gergonne, 1815; Smith, 1918]，其中输入 <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> 通过 <span class="math notranslate nohighlight">\(K\)</span> 个固定标量值的非线性变换 <span class="math notranslate nohighlight">\(\phi_{k}(\mathbf{x})\)</span> 来组成一个特征向量 <span class="math notranslate nohighlight">\(\Phi(\mathbf{x})=\left[\phi_{1}(\mathbf{x}), \ldots, \phi_{K}(\mathbf{x})\right]\)</span> 。然后我们用这个向量代替 <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> 本身进行线性回归。变换  <span class="math notranslate nohighlight">\(\phi_{k}\)</span> 是我们的基础函数，对于标量输入 <span class="math notranslate nohighlight">\(x\)</span> ，它们可以是以 <span class="math notranslate nohighlight">\(k\)</span> 为参数的小波，不同度的多项式 <span class="math notranslate nohighlight">\(x^{k}\)</span>，或不同频率的正弦波。当 <span class="math notranslate nohighlight">\(\phi_{k}(\mathbf{x}):=x_{k}\)</span> 和  <span class="math notranslate nohighlight">\(K=Q\)</span> 时，基函数回归简化为线性回归。基函数通常被认为是固定的和相互正交的，并寻求这些函数的最佳组合</p>
+<p>放宽对基函数固定和互为正交的约束，我们可以用不同的基函数代替[Bishop, 2006]。例如，我们可以将基函数定义为<span class="math notranslate nohighlight">\(\phi_{k}^{\mathbf{w}_{k}, b_{k}}\)</span> ，其中标量值函数 <span class="math notranslate nohighlight">\(\phi_{k}\)</span> 被应用于内积 <span class="math notranslate nohighlight">\(\left\langle\mathbf{w}_{k}, \mathbf{x}\right\rangle+b_{k}\)</span> 。在这种情况下， <span class="math notranslate nohighlight">\(\phi_{k}\)</span> 通常被定义为对所有的 <span class="math notranslate nohighlight">\(k\)</span> 都是相同的，例如 <span class="math notranslate nohighlight">\(\phi_{k}(\cdot)=\sin (\cdot)\)</span> 给出 <span class="math notranslate nohighlight">\(\phi_{k}^{\mathbf{w}_{k}, b_{k}}(\mathbf{x})=\sin \left(\left\langle\mathbf{w}_{k}, \mathbf{x}\right\rangle+b_{k}\right)\)</span> 。由基函数输出组成的特征向量再次作为输入被送入线性变换。模型的输出可以更简洁地写成 <span class="math notranslate nohighlight">\(\mathbf{f}(\mathbf{x})=\Phi^{\mathbf{W}_{1}, \mathbf{b}_{1}}(\mathbf{x}) \mathbf{W}_{2}+\mathbf{b}_{2}\)</span> ，其中<span class="math notranslate nohighlight">\(\Phi^{\mathbf{W}_{1}, \mathbf{b}_{1}}(\mathbf{x})=\phi\left(\mathbf{W}_{1} \mathbf{x}+\mathbf{b}_{1}\right)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{W}_{1}\)</span> 是一个维数为 <span class="math notranslate nohighlight">\(Q\)</span> 乘 <span class="math notranslate nohighlight">\(K\)</span> 的矩阵，<span class="math notranslate nohighlight">\(\mathbf{b}_{1}\)</span> 是一个有 <span class="math notranslate nohighlight">\(K\)</span> 个元素的向量， <span class="math notranslate nohighlight">\(\mathbf{W}_{2}\)</span> 是一个维数为  <span class="math notranslate nohighlight">\(K\)</span> 乘 <span class="math notranslate nohighlight">\(D\)</span> 的矩阵，<span class="math notranslate nohighlight">\(\mathbf{b}_{2}\)</span> 是一个有元素的向量。</p>
+<p>为执行回归，现在我们可以找到  <span class="math notranslate nohighlight">\(\mathbf{W}_{1}\)</span> ,<span class="math notranslate nohighlight">\(\mathbf{b}_{1}\)</span>  以及  <span class="math notranslate nohighlight">\(\mathbf{W}_{2}\)</span> ,<span class="math notranslate nohighlight">\(\mathbf{b}_{2}\)</span> ，使我们观测到的数据的平均误差最小，<span class="math notranslate nohighlight">\(\|\mathbf{y-f(x)}\|^2\)</span> 。</p>
+<p>深度学习中最基本的模型可以描述为这些参数化基函数的层次结构（这种层次结构由于历史原因被称为神经网络，层次结构中的每个特征向量都称为层）。在最简单的回归设置中，我们将简单地组合多个基函数回归模型，而对于分类，我们将在最后进一步组合一个逻辑函数（它“挤压”线性模型的输出以获得概率向量）。层次结构中的每一层都可以看作是一个“积木”，这些积木组合的模块化体现了深度学习模型的多功能性。每个块的简单性，加上模型组合的许多可能性，可能是导致许多工程师在该领域工作的原因。这反过来又导致了工作良好和扩展良好的工具的开发。</p>
+<p>我们将继续回顾简单的神经网络模型，将深度学习领域的符号与上述线性基函数回归模型的数学形式联系起来。然后我们将这些扩展到专门用于处理图像数据和序列数据的模型。在这个过程中，我们将介绍一些贯穿整个工作的术语和数学符号。我们将正式但简洁地描述模型，这将使我们能够使用更精确的语言在介绍中继续我们的讨论</p>
+<p><strong>（1）前馈神经网络 (NNs)</strong></p>
+<p>我们将首先回顾单个隐藏层的神经网络模型 [Rumelhart et al., 1985]。这样做是为了便于记号，并且对多个层的泛化很简单。我们用x表示模型输入（称为输入层，一个有Q个元素的行向量），并通过仿射变换将其转换为一个有K个元素的行向量。我们用W1表示线性映射（称为权重矩阵），用b表示用于变换输入x以获得xW1+b的平移（称为abias）。然后将元素级非线性σ(·)（例如整流线性1（ReLU）或TanH）应用于变换输出，导致隐藏层，每个元素称为网络单元。这之后是第二个线性变换，权重矩阵 W2 将隐藏层映射到模型输出（称为输出层，具有 D 元素的行向量）。这两层也称为内积层。因此我们有 W1 是一个 Q×K 矩阵，W2 是一个 K×D 矩阵，以及 bis 一个 K 维向量。</p>
+<p>给定一些输入 <span class="math notranslate nohighlight">\(^{2} \mathbf{x}\)</span> ，一个标准网络应当输出：
+$<span class="math notranslate nohighlight">\(
+\widehat{\mathbf{y}}=\sigma\left(\mathbf{x} \mathbf{W}_{1}+\mathbf{b}\right) \mathbf{W}_{2}
+\)</span><span class="math notranslate nohighlight">\(
+要使用网络进行回归，我们可能会使用欧几里得损失：
+\)</span><span class="math notranslate nohighlight">\(
+E^{\mathbf{W}_{1}, \mathbf{W}_{2}, \mathbf{b}}(\mathbf{X}, \mathbf{Y})=\frac{1}{2 N} \sum_{i=1}^{N}\left\|\mathbf{y}_{i}-\hat{\mathbf{y}}_{i}\right\|^{2}
+\)</span><span class="math notranslate nohighlight">\(
+其中  \)</span>\left{\mathbf{y}<em>{1}, \ldots, \mathbf{y}</em>{N}\right}<span class="math notranslate nohighlight">\(  是 \)</span>N<span class="math notranslate nohighlight">\( 个已观测的输出，而  \)</span>\left{\hat{\mathbf{y}}<em>{1}, \ldots, \hat{\mathbf{y}}</em>{N}\right}<span class="math notranslate nohighlight">\( 是模型对应于已观测输入  \)</span>\left{\mathbf{x}<em>{1}, \ldots, \mathbf{x}</em>{N}\right}<span class="math notranslate nohighlight">\( 的输出。最小化这个相对于  \)</span>\mathbf{W}<em>{1}, \mathbf{W}</em>{2}, \mathbf{b}<span class="math notranslate nohighlight">\( 的损失有望产生一个可以很好地泛化到未观测的测试数据 \)</span>\mathbf{X}<em>{\text {test }}, \mathbf{Y}</em>{\text {test }}$ 的模型。</p>
+<p>为了使用模型进行分类，预测 <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> 在集合 <span class="math notranslate nohighlight">\(\{1, \ldots, D\}\)</span> 中被分类的概率，我们将模型的输  <span class="math notranslate nohighlight">\(\widehat{\mathbf{y}}\)</span>  通过一个逐元素 softmax 函数来获得归一化的分数 ：<span class="math notranslate nohighlight">\(\widehat{p}_{d}=\exp \left(\widehat{y}_{d}\right) /\left(\sum_{d^{\prime}} \exp \left(\hat{y}_{d^{\prime}}\right)\right)\)</span> 。取  <span class="math notranslate nohighlight">\(\widehat{p}_{d}\)</span> 的对数（带有观测到的标签）导致 softmax 损失。
+$<span class="math notranslate nohighlight">\(
+E^{\mathbf{W}_{1}, \mathbf{W}_{2}, \mathbf{b}}(\mathbf{X}, \mathbf{Y})=-\frac{1}{N} \sum_{i=1}^{N} \log \left(\hat{p}_{i, d_{i}}\right)
+\)</span><span class="math notranslate nohighlight">\(
+其中 \)</span>d_{i} \in{1,2, \ldots, D}<span class="math notranslate nohighlight">\( 是对应于输入  \)</span>i$ 的已观测类别。</p>
+<p>上述模型的一个很大的困难是它们倾向于过度拟合——减少它们在训练集 <span class="math notranslate nohighlight">\(\mathbf{X}, \mathbf{Y}\)</span> 上的损失，同时增加它们在测试集 <span class="math notranslate nohighlight">\(\mathbf{X}_{\text {test }}, \mathbf{Y}_{\text {test }}\)</span> 上的损失。出于这个原因，经常在优化过程中添加一个正则化项。我们经常对由一些权重衰减 <span class="math notranslate nohighlight">\(\lambda_{i}\)</span> 加权的每个参数使用  <span class="math notranslate nohighlight">\(L_{2}\)</span>  正则化，从而产生最小化目标（通常称为成本），
+$<span class="math notranslate nohighlight">\(
+\mathcal{L}\left(\mathbf{W}_{1}, \mathbf{W}_{2}, \mathbf{b}\right):=E^{\mathbf{W}_{1}, \mathbf{W}_{2}, \mathbf{b}}(\mathbf{X}, \mathbf{Y})+\lambda_{1}\left\|\mathbf{W}_{1}\right\|^{2}+\lambda_{2}\left\|\mathbf{W}_{2}\right\|^{2}+\lambda_{3}|| \mathbf{b} \|^{2}
+\)</span>$
+上述带有欧几里德损失的单隐藏层神经网络与基函数回归模型相同。将这个简单的神经网络模型扩展到多个层会产生更具表现力的模型。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>模型表达性</strong>：模型表达性的直观定义可能是模型可以捕获的函数的复杂性（定义复杂函数本身并不是微不足道的，尽管在处理多项式时，可能会定义比低阶多项式更复杂的高阶多项式）。从这个意义上说，分层基函数模型比它们的“扁平”对应部分更具表现力。值得注意的是，即使“平坦”基函数回归可以使用足够多的基函数对任何函数建模，达到任何给定的精度 [Cybenko, 1989; Hornik, 1991]，有了层次结构，我们可以使用更小的模型。考虑具有多项式基函数φk∈{1,x,x2,…,xK−1}的基函数回归的例子：用这些K基函数表达的函数集是{所有多项式达到K-1次}。组合基函数回归模型 Ltimes 会产生一个模型，该模型可以从集合 {all polynomials up to degree(K−1)L} 中捕获（的子集）函数。捕获多项式高达 (K-1)L 次的“平面”模型需要 KLbasis 函数，而具有相似（但不相同）表达能力的分层模型只需要 K×Lbasis 函数。例如，在 [Bengio 和 LeCun，2007] 中进一步讨论了模型表达性，其中使用二进制电路作为说明性示例。</p>
+</div>
+<p>上面介绍的简单模型结构可以扩展到专门的模型，旨在处理图像输入或序列输入。我们接下来将快速回顾这些模型。</p>
+<p><strong>（2）卷积神经网络 (CNNs)。</strong></p>
+<p>CNNs [LeCun et al., 1989; Rumelhartet al., 1985] 是用于图像处理的流行深度学习工具，它可以解决直到最近才被认为是我们无法完成的任务 [Krizhevsky et al., 2012; Szegedy et al., 2014]。该模型由卷积层和池化层的递归应用组成，然后是网络末端的内积层（上面描述的简单 NNs）。卷积层是一种线性变换，可以保留输入图像中的空间信息（如图 1.1 所示）。池化层简单地采用卷积层的输出并降低其维数（例如通过采用每个（2,2）像素块的最大值）。卷积层将在第 3.4.1 节中更详细地解释。</p>
+<p>与 CNN 类似，循环神经网络是专门用于处理序列数据的模型。</p>
+<p><strong>（3）循环神经网络</strong></p>
+<p>RNN [Rumelhart et al., 1985; Werbos, 1988] 是基于序列的模型，对自然语言理解、语言生成、视频处理和许多其他任务至关重要 [Kalchbrenner and Blunsom, 2013;米科洛夫等人，2010 年； Sundermeyer 等人，2012 年； Sutskever 等人，2014 年]。模型的输入是一个符号序列，其中在每个时间步，一个简单的神经网络 (RNNunit) 被应用于单个符号，以及来自前一时间步的网络输出。 RNN 是强大的模型，在许多任务上表现出卓越的性能。</p>
+<p>为了符号的简洁，我们将专注于简单的 RNN 模型。给定长度为 <span class="math notranslate nohighlight">\(T\)</span> 的输入序列  <span class="math notranslate nohighlight">\(\mathbf{x}=\left[\mathbf{x}_{1}, \ldots, \mathbf{x}_{T}\right]\)</span> ，一个简单的 RNN 是通过重复应用函数 <span class="math notranslate nohighlight">\(\mathbf{f}_{\mathbf{h}}\)</span> 形成的。这会为时间步 <span class="math notranslate nohighlight">\(t\)</span> 生成一个隐藏状态 <span class="math notranslate nohighlight">\(\mathbf{h}_{t}\)</span> ：
+$<span class="math notranslate nohighlight">\(
+\mathbf{h}_{t}=\mathbf{f}_{\mathbf{h}}\left(\mathbf{x}_{t}, \mathbf{h}_{t-1}\right)=\sigma\left(\mathbf{x}_{t} \mathbf{W}_{\mathbf{h}}+\mathbf{h}_{t-1} \mathbf{U}_{\mathbf{h}}+\mathbf{b}_{\mathbf{h}}\right)
+\)</span><span class="math notranslate nohighlight">\(
+对于一些非线性 \)</span>\sigma<span class="math notranslate nohighlight">\( 。例如，模型输出可以定义为：
+\)</span><span class="math notranslate nohighlight">\(
+\widehat{\mathbf{y}}=\mathbf{f}_{\mathbf{y}}\left(\mathbf{h}_{T}\right)=\mathbf{h}_{T} \mathbf{W}_{\mathbf{y}}+\mathbf{b}_{\mathbf{y}}
+\)</span>$
+LSTM 和 GRU（更复杂的 RNN 模型）的定义在后面的第 3.4.2.3 节中给出。</p>
+</div>
+<div class="section" id="id5">
+<h2>1.2 模型的不确定性<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>上述模型可用于多种应用，例如根据病变图像诊断皮肤癌、自动驾驶汽车的转向以及用户上传宠物图片的网站中的犬种分类。例如，给定几张狗的图片作为训练数据——当用户上传他的狗的照片时——假设网站应该返回一个具有相当高置信度的预测。但是如果用户上传了一张猫的照片并要求网站决定狗的品种，会发生什么？</p>
+<p>以上是分布测试数据的示例。该模型已经接受了不同品种狗的照片训练，并且（希望）学会了区分它们。但是该模型以前从未见过猫，并且猫的照片将位于模型训练的数据分布之外。这个说明性示例可以扩展到更严重的设置，例如使用诊断系统从未观察过的结构进行 MRI 扫描，或者自动汽车转向系统从未接受过训练的场景。在这种情况下，模型可能需要的行为是返回一个预测（试图从我们观测到的数据外推），但返回一个带有附加信息的答案，即该点位于数据分布之外（请参阅案例的简单描述图 1.2 中的回归）。 IE。我们希望我们的模型具有一些数量，通过此类输入传达高度不确定性（或者，传达低置信度）</p>
+<p>其他可能导致不确定性的情况包括</p>
+<ul class="simple">
+<li><p>有噪声的数据（我们观测到的标签可能是有噪声的，例如由于测量不精确，导致任意不确定性）</p></li>
+<li><p>最能解释观测到的数据的模型参数的不确定性（大量可能的模型可能能够解释给定的数据集，在这种情况下，我们可能不确定选择使用哪些模型参数进行预测）</p></li>
+<li><p>以及结构不确定性（我们应该使用什么模型结构？我们如何指定我们的模型来很好地外推/插值？）。</p></li>
+</ul>
+<p>后两种不确定性可归为模型不确定性（也称为认知不确定性）。偶然不确定性和认知不确定性然后可用于推导预测的不确定性，即我们对预测的信心。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>备注（术语注释）epistemic 来自“episteme”，希腊语为“知识”，即认知不确定性是“知识不确定性”。Aleatoric来自拉丁语“aleator”或“骰子玩家”，即任意不确定性是“骰子玩家”的不确定性。认知不确定性和任意不确定性有时分别称为可还原和不可还原的不确定性，因为认知不确定性可以通过更多的数据（知识）来减少，而任意不确定性则不能（不能通过观察更多的掷骰子来减少掷骰子的随机性）。不过，我们将避免使用这个术语，因为任意不确定性也可以被视为通过提高测量精度来“减少”，即通过改变我们进行实验的基础系统。</p>
+</div>
+<p>不确定性信息经常用于生命科学，正如 Herzog 和 Ostwald [2013] 在 Naturepapers 中所讨论的那样； Krzywinski 和 Altman [2013]； Nuzzo [2014]，以及 [Trafimow and Marks, 2015] 中的有趣案例。在这些领域，量化我们对模型预测的信心非常重要。不确定性信息对从业者也很重要。了解模型是信心不足还是错误地过度自信（即其不确定性估计太小）有助于从中获得更好的性能。认识到测试数据与训练数据相去甚远，我们可以增加训练数据。</p>
+<p>但也许更重要的是，模型不确定性信息可用于做出直接或间接影响人类生活的决策的系统，如下所述。</p>
+</div>
+<div class="section" id="ai">
+<h2>1.3 模型不确定性与 AI 安全<a class="headerlink" href="#ai" title="Permalink to this headline">¶</a></h2>
+<p>随着机器学习领域的最新工程进展，直到最近才应用于玩具数据的系统现在正在现实生活环境中部署。在这些环境中，控制权在有可能的情况下移交给自动化系统的场景成为危及人类的生命。其中包括医疗领域的自动决策或推荐系统、无人机和自动驾驶汽车的自主控制、通过高频交易在全球范围内影响我们经济的能力以及关键系统的控制。 AI 安全的伞形领域。</p>
+<p>这种对 AI 安全的解释与该领域中给出的其他解释大不相同，后者主要集中在强化学习 (RL) 设置上。例如，有些人着眼于自学习代理的环境设计，不允许代理利用学习过程本身的缺陷（例如“奖励黑客”；参见例如 [Amodei et al., 2016]）。相比之下，我将讨论在监督环境中训练的机器学习模型做出的某些决策可能危及人类生命的场景（即模型错误地将输入映射到输出会导致不良后果的环境）。在其中一些场景中，依靠模型不确定性来调整决策过程可能是防止意外行为的关键。</p>
+<div class="section" id="id6">
+<h3>1.3.1 医生诊断患者<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>当医生根据病历分析建议患者使用某些药物时，医生通常会依赖分析病历的专家的信心。然而，基于 MRI 扫描的自动癌症检测等系统的引入可能会使这个过程变得更加复杂。即使在专家手中，这样的系统也可能引入影响专家判断的偏见。遇到位于其数据分布之外的测试示例的系统很容易提出不合理的建议，从而导致专家产生不合理的偏见。然而，在系统本质上是随机猜测的时候，给定模型置信度，专家可能会被告知。</p>
+</div>
+<div class="section" id="id7">
+<h3>1.3.2 自动驾驶汽车<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>自主系统的范围可以从一个简单的机器人真空扫地机器人，到自动驾驶汽车将人和货物从一个地方运送到另一个地方。系统在很大程度上可以分为两类：一类依靠基于规则的系统来控制自己的行为，一类可以学习使自己的行为适应环境。两者都可以使用机器学习工具。前一组通过底层使用机器学习算法进行特征提取，后一组通过强化学习</p>
+<p>对于自动驾驶汽车，使用图像分割和图像定位等低级特征提取来处理原始感官输入 [Bojarski et al., 2016]。然后将这些模型的输出输入到更高级别的决策程序中。更高级别的决策可以通过专家系统来完成，例如依靠一组固定的规则（“如果你的左边有一个骑自行车的人，不要向左转”）。然而，较低级别的机器学习组件所犯的错误可能会影响决策过程并导致毁灭性的结果。在辅助驾驶系统中，一个证明此类方法风险的具体示例是低级组件无法将正在转弯的拖车的白色侧与明亮的天空区分开来，这导致了辅助驾驶系统的首次死亡[NHTSA， 2017]。在这样的模块化系统中，人们可以使用模型对低级组件的置信度，并根据这种不确定性信息做出高级决策。例如，一个分割系统可以识别它在区分天空和另一辆车时的不确定性，可以提醒用户控制转向。</p>
+</div>
+<div class="section" id="id8">
+<h3>1.3.3 关键系统和高频交易<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>作为最后一个例子，有趣的是注意到对关键系统的控制正在慢慢移交给机器学习系统。这可能发生在邮局，根据邮政编码对信件进行分类 [LeCun and Cortes, 1998; LeCun 等人，1998 年]，或者在具有负责关键基础设施的系统的核电厂中 [Lindaet al.，2009 年]。即使在高频交易中——计算机被赋予对可能破坏整个经济市场稳定的系统的控制权——发出不寻常的交易命令可能会导致灾难。当使用基于规则的决策时，一个可能的解决方案是依赖正式的程序验证系统。此类系统允许开发人员在部署之前验证程序是否按预期工作。但是基于机器学习的决策系统不允许这样做。在输出具有高不确定性的情况下，系统应该怎么做？</p>
+<p>有了模型置信度，一种可能的解决方案是明确地将不确定输出视为特殊情况。在关键系统的情况下，我们可能决定将输入传递给人类来做出决定。或者，可以使用一个简单且快速的模型来执行预测，并仅对弱模型不确定的输入使用更精细但速度较慢的模型。</p>
+<p>在这项工作中，我们将开发在深度学习中推理模型置信度所需的工具，这些工具可以应用于上面讨论的场景。这将通过开发可应用于现有工具的通用框架来实现。这反过来又允许继续使用已经证明自己有用并且已经进行了大量研究的现有系统。在上述设置中使用这些发展的具体例子将在第 5.1 节中给出。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>1.4 模型不确定性的应用<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>除了人工智能安全，还有许多应用依赖于模型的不确定性。这些应用包括选择从哪些数据中学习，或者有效地探索一个代理（类人机器人等的总称）的环境。这两项任务的共同点是使用模型的不确定性从少量数据中学习。在数据收集昂贵（如专家对单个例子的注释）或耗时（如多次重复实验）的情况下，这往往是必要的。</p>
+<div class="section" id="id10">
+<h3>1.4.1 主动学习<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>我们如何使用机器学习来帮助专家在艰苦的领域工作？一种方法是将专家工作的一小部分自动化，例如平凡的细胞计数，或基于核磁共振扫描的癌症诊断。不过这可能是机器学习中的一个难题。许多机器学习算法，包括深度学习，往往需要大量的标记数据来进行很好的概括。所需的标记数据量随着问题的复杂性或输入数据的复杂性而增加：例如，图像输入往往需要大型模型来处理，而这些模型又需要大量的数据（例如，Krizhevsky等人[2012]使用了数百个千兆字节的标记图像）。例如，要实现核磁共振扫描分析的自动化，这就需要专家对大量的核磁共振扫描进行注释，给它们贴上标签，以指示病人是否患有癌症。但是，专家的时间是昂贵的，而且往往无法获得所需数量的标记数据。在标记数据稀缺而专家知识昂贵的情况下，我们如何学习？</p>
+<p>这项任务的一种可能方法可能依赖于主动学习 [Settles, 2010]。在这个学习框架中，模型本身会选择哪些未标记的数据是最具备信息性的，并要求外部“oracle”（例如人工注释器）为这些新数据点提供标签。要标记的数据点的选择是通过获取函数完成的，该函数根据它们的潜在信息量对点进行排序。存在不同的获取函数，并且许多函数利用关于未标记数据点的模型不确定性来决定它们的潜在信息量 [Houlsbyet al ., 2011]。遵循这个学习框架，我们可以将所需数据的数量减少几个数量级，同时仍然保持良好的模型性能（我们将在下面的第 5.2 节中看到）。</p>
+<p>回到上面那个从核磁共振扫描中诊断癌症的例子，我们会看到一个可以对图像数据产生良好的不确定性估计的模型，并依靠这个模型来设计一个合适的采集函数。深度学习为图像处理提供了极好的工具，可以很好地泛化，但这些工具依赖于大量的标记数据，并不提供模型的不确定性。在这项工作中，我们将开发这类工具的扩展，可以部署在小的数据系统中，并提供良好的模型置信度。利用这些工具，我们将证明上述想法在主动学习中的可行性（第5.2节，与Riashat Islam的联合工作，作为其硕士项目的一部分）。</p>
+</div>
+<div class="section" id="id11">
+<h3>1.4.2 深度强化学习中的高效探索<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>强化学习 (RL) 算法通过反复试验来学习控制任务，就像孩子学习骑自行车 [Sutton and Barto, 1998]。但现实世界控制任务的试验往往涉及我们不想浪费的时间和资源。或者，由于系统磨损，试验次数可能会受到限制，从而使数据效率变得至关重要</p>
+<p>这是对强化学习的简单介绍，考虑一个需要根据其动作（向不同方向滚动）了解其环境（客厅）的代理（例如 Roombvacuum）。它可以决定前进，也可以撞墙。鼓励 Roomba 不要以正奖励撞墙，随着时间的推移，它会学会避开它们以最大化其奖励。 TheRoomba 必须探索它的环境以寻找这些奖励，并在这种探索和利用它已经知道的东西之间进行权衡。</p>
+<p>RL 深度学习方法（称为深度 RL）的最新进展在游戏中取得了令人印象深刻的结果 [Mnih 等人，2013]。这种方法利用神经网络进行 Q 值函数逼近。这些是估计代理可以采取的不同行动的质量的函数。 Epsilon 贪婪搜索通常用于代理以一定概率选择其最佳动作并进行其他探索的情况。但是有了不确定性信息，代理可以决定何时利用以及何时探索其周边环境。由于对代理 Q 值函数的不确定性估计，可以使用诸如 Thompson 采样 [Thompson, 1933] 之类的技术来更快地学习。这将在下面演示（第 5.3 节）</p>
+<p>即使像Thompson抽样这样的探索技术可以帮助更快地学习更好的政策，但通过建立系统动力学模型，可以更大幅度地提高数据效率[Atkeson and Santamaria, 1997]。动态模型允许代理将其关于系统动态的知识推广到其他未观测到的状态。概率动态模型允许代理在整个规划和预测过程中考虑过渡的不确定性，进一步提高数据效率。PILCO通过高斯过程动力学模型分析传播不确定的陈述分布。这是通过递归地将一个时间步骤的输出状态分布（输出不确定性）作为下一个时间步骤的输入状态分布（输入不确定性）来完成的，直到一个固定的时间跨度T。PILCO依赖于高斯过程（GPs），它在处理少量低维数据时效果非常好，但随着试验数量的增加，其规模也呈立方体。此外，PILCO的分布传播在观察空间的维度上增加了一个平方项，使得该框架很难扩展到高维观察空间。这使得PILCO难以用于需要大量试验的任务。更有甚者，PILCO没有考虑连续状态转换之间模型不确定性的时间相关性。这意味着PILCO低估了未来时间步骤的状态不确定性[Deisenroth等人，2015]，这可能导致性能下降。</p>
+<p>在第5.4节中，我们试图回答这些缺点，用贝叶斯深度动力学模型取代PILCO的高斯过程，同时保持框架的随机性和数据效率的优势（与Rowan McAllister和Carl Rasmussen联合工作[Gal等人，2016]）。</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>1.5 深度学习中的模型不确定性<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>在确定了模型的置信度是一个很好的数量之后，重要的是要注意大多数深度学习模型并不提供这样的信息。在分类模型中，在管道末端得到的概率向量（softmax输出）经常被错误地解释为模型的信心。一个模型的预测可以是不确定的，即使有较高的softmax输出（图1.3）。将函数的点估计（实线1.3a）通过softmax（实线1.3b），会导致对远离训练数据的点进行不合理的高置信度推断。然而，将分布（阴影区域1.3a）通过软键（阴影区域1.3b）可以更好地反映远离训练数据的分类不确定性。</p>
+<p>尽管在实践中使用的现代深度学习模型没有捕获模型置信度，但它们与一系列概率模型密切相关，这些模型在函数上产生概率分布：高斯过程。给定一个神经网络，通过在每个权重上放置概率分布（例如标准正态分布），可以在无限多个权重的限制中恢复高斯过程（参见 Neal [1995] 或 Williams [1997]）。对于有限数量的权重，模型的不确定性仍然可以通过在权重上放置分布来获得——这些模型称为贝叶斯神经网络。 [MacKay, 1992b] 对这些进行了广泛的研究，[Neal, 1995] 进一步扩展了这些工作。最近，[Blundell et al., 2015;格雷夫斯，2011 年； Kingmaand Welling, 2013]（尽管这种与贝叶斯神经网络一起使用的技术可以追溯到 Hinton 和 Van Camp [1993] 以及 Barber 和 Bishop [1998]）。但是其中一些模型很难使用——通常需要还有更多参数需要优化——但在深度学习社区中还没有真正流行起来，也许是因为它们的实用性有限。</p>
+<p>那么，怎样才能使获得模型不确定性的工具变得实用呢？这种工具的一个要求是能够很好地扩展到大数据，并很好地扩展到复杂模型（例如 CNN 和 RNN）。或许更重要的是，改变已经被充分研究过的现有模型架构是不切实际的，并且使用难以向非专家解释的复杂和繁琐的技术通常是不切实际的。获得模型置信度的现有方法通常不能扩展到复杂模型或大量数据，并且需要我们为现有任务开发新模型，而我们已经拥有性能良好的工具</p>
+<p>因此，我们将专注于开发实用技术，以获得深度学习中的模型信心，这些技术也深深植根于概率论和贝叶斯建模的理论基础中。具体来说，我们将利用随机正则化技术 (SRT)。 SRT 是最近开发的用于模型正则化的技术，在深度学习中取得了巨大成功，并且几乎用于所有现代深度学习模型。这些技术随机调整模型输出作为模型正则化的一种方式（因此命名为随机正则化）。这导致损失成为随机量，这是使用随机非凸优化文献中的工具进行优化的。流行的 SRT 包括 dropout [Hinton et al., 2012]、乘法高斯噪声 [Srivastava et al., 2014]、dropConnect [Wan et al., 2013] 和无数其他最近的技术 4,5</p>
+<p>我们将在下面看到，我们几乎可以采用任何经过 SRT 训练的网络，并且给定一些输入 x∗ 获得预测均值 E[y∗]（给定我们的输入的预期模型输出）和预测方差 Var[y∗]（模型有多少对它的预测充满信心。为了获得这些，我们用 inputx∗ 模拟网络输出，将 SRT 视为我们在训练期间使用模型（即通过随机前向传递获得随机输出）。我们重复这个过程几次（forTrepetitions），采样 i.i.d.outputs{̂y∗1(x∗),…,̂y∗T(x∗)}。如下文将解释的，这些是来自近似预测分布的经验样本。我们可以从这些样本中获得我们的近似预测分布的预测均值以及预测方差（我们的不确定性）的经验估计量</p>
+<p>这两个简单方程的理论依据将在第 3 章中给出。</p>
+<p>方程（1.4）产生的不确定性估计适用于大模型和大数据，可应用于基于图像的模型、基于序列的模型以及许多不同的设置，例如强化学习和主动学习。此外，这些技术的结合使我们能够执行直到最近才可能完成的任务。例如，我们在下面演示了如何使用图像数据执行主动学习，这是一项极具挑战性的任务，因为缺乏从图像数据中提供良好不确定性估计的工具。</p>
+</div>
+<div class="section" id="id13">
+<h2>1.6 论文结构<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>本论文的第一部分（第 3-5 章）将涉及提供获得实际不确定性估计的工具，并演示如何在许多示例应用中使用这些工具。专家和该领域的非专家都应该可以轻松访问该部分。本论文的第二部分（第 6 章）深入探讨了上述工作的理论意义。</p>
+<p>本论文中的一些工作先前已在 [Gal, 2015; Gal andGhahramani, 2015a,b,c,d, 2016a,b,c; Gal et al., 2016]，但这篇论文也包含许多新的工作。其中最值得关注的是：</p>
+<p>（1）对用于变分推理的 Monte Carlo estimator 方差的理论分析（§3.1.1–§3.1.2）；</p>
+<p>（2）对分类任务中不确定性度量方法的调查（§3.3.1）；</p>
+<p>（3）对不同贝叶斯神经网络的实证分析网络先验（§4.1）和具有各种近似分布的后验（§4.2）；新的定量结果比较 dropout 与现有技术（§4.3），贝叶斯神经网络中的异方差预测不确定性工具（§4.6）</p>
+<p>（4）主动学习中的应用（§5.2）</p>
+<p>（5）讨论什么决定了我们的模型不确定性看起来像什么（§6.1–§6.2），对贝叶斯线性回归中的dropout近似分布的分析分析（§6.3），对ELBO测试对数似然相关性的分析（§6.4），离散先验模型（第 6.5 节），将 dropout 解释为代理后验尖峰和平板先验模型（第 6.6 节），以及基于变分解释优化 dropout 概率的程序详细说明不确定性的不同来源（第 6.7 节）。</p>
+<p>这项工作中提供的实验代码可从 <a class="reference external" href="https://github.com/yaringal">https://github.com/yaringal</a> 获得。</p>
+<p>‘’’{bibliography}
+:all:
+‘’’</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -249,11 +461,11 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="intro.html" title="previous page">
+        <a class="left-prev" href="abstract.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">封面</p>
+                <p class="prevnext-title">摘要</p>
             </div>
         </a>
     </div>

@@ -1,0 +1,567 @@
+Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig
+Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat,
+Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Yangqing Jia, Rafal
+Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dan Mané, Rajat
+Monga, Sherry Moore, Derek Murray, Chris Olah, Mike Schuster, Jonathon Shlens,
+Benoit Steiner, Ilya Sutskever, Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay
+Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin
+Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on
+heterogeneous systems, 2015. URL http://tensorflow.org/. Software available from
+tensorflow.org.
+
+Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan
+Mane. Concrete problems in ai safety. arXiv preprint arXiv:1606.06565, 2016.
+
+C Angermueller and O Stegle. Multi-task deep neural network to predict CpG methylation
+profiles from low-coverage sequencing data. In NIPS MLCB workshop, 2015.
+
+O Anjos, C Iglesias, F Peres, J Martínez, Á García, and J Taboada. Neural networks
+applied to discriminate botanical origin of honeys. Food chemistry, 175:128–136, 2015.
+
+Christopher Atkeson and Juan Santamaria. A comparison of direct and model-based
+reinforcement learning. In In International Conference on Robotics and Automation.
+Citeseer, 1997.
+
+Jimmy Ba and Brendan Frey. Adaptive dropout for training deep neural networks. In
+Advances in Neural Information Processing Systems, pages 3084–3092, 2013.
+
+P Baldi, P Sadowski, and D Whiteson. Searching for exotic particles in high-energy
+physics with deep learning. Nature communications, 5, 2014.
+
+Pierre Baldi and Peter J Sadowski. Understanding dropout. In Advances in Neural
+Information Processing Systems, pages 2814–2822, 2013.
+
+David Barber and Christopher M Bishop. Ensemble learning in Bayesian neural networks.
+NATO ASI SERIES F COMPUTER AND SYSTEMS SCIENCES, 168:215–238, 1998.
+
+Justin Bayer, Christian Osendorfer, Daniela Korhammer, Nutan Chen, Sebastian Urban,
+and Patrick van der Smagt. On fast dropout and its applicability to recurrent networks.
+arXiv preprint arXiv:1311.0701, 2013.
+
+Yoshua Bengio and Yann LeCun. Scaling learning algorithms towards ai. Large-scale
+kernel machines, 34(5), 2007.
+
+S Bergmann, S Stelzer, and S Strassburger. On the use of artificial neural networks in
+simulation-based manufacturing control. Journal of Simulation, 8(1):76–90, 2014.
+
+James Bergstra et al. Theano: a CPU and GPU math expression compiler. In Proceedings of the Python for Scientific Computing Conference (SciPy), June 2010. Oral
+Presentation.
+
+Chris M Bishop. Training with noise is equivalent to Tikhonov regularization. Neural
+computation, 7(1):108–116, 1995.
+
+Christopher M. Bishop. Pattern Recognition and Machine Learning (Information Science
+and Statistics). Springer-Verlag New York, Inc., Secaucus, NJ, USA, 2006. ISBN
+0387310738.
+
+Théodore Bluche, Christopher Kermorvant, and Jérôme Louradour. Where to apply
+dropout in recurrent neural networks for handwriting recognition? In ICDAR. IEEE,
+2015.
+
+Charles Blundell, Julien Cornebise, Koray Kavukcuoglu, and Daan Wierstra. Weight
+uncertainty in neural network. In ICML, 2015.
+
+Ondřej Bojar, Rajen Chatterjee, Christian Federmann, Yvette Graham, Barry Haddow,
+Matthias Huck, Antonio Jimeno Yepes, Philipp Koehn, Varvara Logacheva, Christof
+Monz, Matteo Negri, Aurelie Neveol, Mariana Neves, Martin Popel, Matt Post, Raphael
+Rubino, Carolina Scarton, Lucia Specia, Marco Turchi, Karin Verspoor, and Marcos
+Zampieri. Findings of the 2016 conference on machine translation. In Proceedings of
+the First Conference on Machine Translation, pages 131–198, Berlin, Germany, August
+2016. Association for Computational Linguistics.
+
+Mariusz Bojarski, Davide Del Testa, Daniel Dworakowski, Bernhard Firner, Beat Flepp,
+Prasoon Goyal, Lawrence D Jackel, Mathew Monfort, Urs Muller, Jiakai Zhang, et al.
+End to end learning for self-driving cars. arXiv preprint arXiv:1604.07316, 2016.
+
+Thang D Bui, Daniel Hernández-Lobato, Yingzhen Li, José Miguel Hernández-Lobato,
+and Richard E Turner. Deep Gaussian processes for regression using approximate
+expectation propagation. ICML, 2016.
+
+Samuel Rota Bulò, Lorenzo Porzi, and Peter Kontschieder. Dropout distillation. In
+Proceedings of The 33rd International Conference on Machine Learning, pages 99–107,
+2016.
+
+Theophilos Cacoullos. On upper and lower bounds for the variance of a function of a
+random variable. The Annals of Probability, pages 799–809, 1982.
+
+Hugh Chipman. Bayesian variable selection with related predictors.
+
+Kyunghyun Cho et al. Learning phrase representations using RNN encoder–decoder for
+statistical machine translation. In EMNLP, Doha, Qatar, October 2014. ACL.
+
+François Chollet. Keras, 2015. URL https://github.com/fchollet/keras. GitHub repository.
+
+David A Cohn, Zoubin Ghahramani, and Michael I Jordan. Active learning with statistical
+models. Journal of artificial intelligence research, 1996.
+
+George Cybenko. Approximation by superpositions of a sigmoidal function. Mathematics
+of control, signals and systems, 2(4):303–314, 1989.
+
+Marc Deisenroth and Carl Rasmussen. PILCO: A model-based and data-efficient approach
+to policy search. In Proceedings of the 28th International Conference on machine
+learning (ICML-11), pages 465–472, 2011.
+
+Marc Deisenroth, Dieter Fox, and Carl Rasmussen. Gaussian processes for data-efficient
+learning in robotics and control. Pattern Analysis and Machine Intelligence, IEEE
+Transactions on, 37(2):408–423, 2015.
+
+Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. Imagenet: A
+large-scale hierarchical image database. In Computer Vision and Pattern Recognition,
+2009. CVPR 2009. IEEE Conference on, pages 248–255. IEEE, 2009.
+
+John Denker and Yann LeCun. Transforming neural-net output levels to probability
+distributions. In Advances in Neural Information Processing Systems 3. Citeseer, 1991.
+
+John Denker, Daniel Schwartz, Ben Wittner, Sara Solla, Richard Howard, Lawrence
+Jackel, and John Hopfield. Large automatic learning, rule extraction, and generalization.
+Complex systems, 1(5):877–922, 1987.
+
+Stefan Depeweg, José Miguel Hernández-Lobato, Finale Doshi-Velez, and Steffen Udluft.
+Learning and policy search in stochastic dynamical systems with Bayesian neural
+networks. arXiv preprint arXiv:1605.07127, 2016.
+
+Simon Duane, Anthony D Kennedy, Brian J Pendleton, and Duncan Roweth. Hybrid
+Monte Carlo. Physics letters B, 195(2):216–222, 1987.
+
+Linton G Freeman. Elementary applied statistics, 1965.
+
+Michael C. Fu. Chapter 19 gradient estimation. In Shane G. Henderson and Barry L.
+Nelson, editors, Simulation, volume 13 of Handbooks in Operations Research and
+Management Science, pages 575 – 616. Elsevier, 2006.
+
+Antonino Furnari, Giovanni Maria Farinella, and Sebastiano Battiato. Segmenting
+egocentric videos to highlight personal locations of interest. 2016.
+
+Yarin Gal. A theoretically grounded application of dropout in recurrent neural networks.
+arXiv:1512.05287, 2015.
+
+Yarin Gal and Zoubin Ghahramani. Bayesian convolutional neural networks with Bernoulli
+approximate variational inference. arXiv:1506.02158, 2015a.
+
+Yarin Gal and Zoubin Ghahramani. Dropout as a Bayesian approximation: Insights and
+applications. In Deep Learning Workshop, ICML, 2015b.
+
+Yarin Gal and Zoubin Ghahramani. Dropout as a Bayesian approximation: Representing
+model uncertainty in deep learning. arXiv:1506.02142, 2015c.
+
+Yarin Gal and Zoubin Ghahramani. Dropout as a Bayesian approximation: Appendix.
+arXiv:1506.02157, 2015d.
+
+Yarin Gal and Zoubin Ghahramani. Bayesian convolutional neural networks with Bernoulli
+approximate variational inference. ICLR workshop track, 2016a.
+
+Yarin Gal and Zoubin Ghahramani. A theoretically grounded application of dropout in
+recurrent neural networks. NIPS, 2016b.
+
+Yarin Gal and Zoubin Ghahramani. Dropout as a Bayesian approximation: Representing
+model uncertainty in deep learning. ICML, 2016c.
+
+Yarin Gal and Richard Turner. Improving the Gaussian process sparse spectrum approximation by representing uncertainty in frequency inputs. In Proceedings of the 32nd
+International Conference on Machine Learning (ICML-15), 2015.
+
+Yarin Gal, Mark van der Wilk, and Carl Rasmussen. Distributed variational inference
+in sparse Gaussian process regression and latent variable models. In Z. Ghahramani,
+M. Welling, C. Cortes, N.D. Lawrence, and K.Q. Weinberger, editors, Advances in
+Neural Information Processing Systems 27, pages 3257–3265. Curran Associates, Inc.,
+2014.
+
+Yarin Gal, Rowan McAllister, and Carl E. Rasmussen. Improving PILCO with Bayesian
+neural network dynamics models. Data-Efficient Machine Learning workshop, ICML,
+April, 2016.
+
+Edward I George and Robert E McCulloch. Variable selection via gibbs sampling. Journal
+of the American Statistical Association, 88(423):881–889, 1993.
+
+Edward I George and Robert E McCulloch. Approaches for Bayesian variable selection.
+Statistica sinica, pages 339–373, 1997.
+
+Z Ghahramani. Probabilistic machine learning and artificial intelligence. Nature, 521
+(7553), 2015.
+
+Z. Ghahramani and H. Attias. Online variational Bayesian learning. Slides from talk
+presented at NIPS 2000 Workshop on Online learning, 2000.
+
+Ryan J Giordano, Tamara Broderick, and Michael I Jordan. Linear response methods
+for accurate covariance estimates from mean field variational Bayes. In Advances in
+Neural Information Processing Systems, pages 1441–1449, 2015.
+
+Paul Glasserman. Monte Carlo methods in financial engineering, volume 53. Springer
+Science & Business Media, 2013.
+
+Peter W Glynn. Likelihood ratio gradient estimation for stochastic systems. Communications of the ACM, 33(10):75–84, 1990.
+
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville. Deep learning. Book in preparation
+for MIT Press, 2016. URL http://www.deeplearningbook.org.
+
+Ian J Goodfellow, Aaron Courville, and Yoshua Bengio. Spike-and-slab sparse coding for
+unsupervised feature discovery. arXiv preprint arXiv:1201.3382, 2012.
+
+Alan Graves, Abdel-rahman Mohamed, and Geoffrey Hinton. Speech recognition with
+deep recurrent neural networks. In ICASSP. IEEE, 2013.
+
+Alex Graves. Practical variational inference for neural networks. In NIPS, 2011.
+
+Shixiang Gu, Timothy Lillicrap, Ilya Sutskever, and Sergey Levine. Continuous deep
+Q-learning with model-based acceleration. ICML, 2016.
+
+Jose Miguel Hernandez-Lobato and Ryan Adams. Probabilistic backpropagation for
+scalable learning of Bayesian neural networks. In ICML, 2015.
+
+José Miguel Hernández-Lobato, Yingzhen Li, Daniel Hernández-Lobato, Thang Bui, and
+Richard E Turner. Black-box alpha divergence minimization. In Proceedings of The
+33rd International Conference on Machine Learning, pages 1511–1520, 2016.
+
+S Herzog and D Ostwald. Experimental biology: Sometimes Bayesian statistics are better.
+Nature, 494, 2013.
+
+Geoffrey E Hinton and Drew Van Camp. Keeping the neural networks simple by
+minimizing the description length of the weights. In COLT, pages 5–13. ACM, 1993.
+
+Geoffrey E Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and Ruslan R
+Salakhutdinov. Improving neural networks by preventing co-adaptation of feature
+detectors. arXiv preprint arXiv:1207.0580, 2012.
+
+Sepp Hochreiter and Jürgen Schmidhuber. Long short-term memory. Neural Computation,
+9(8), 1997.
+
+Matthew D Hoffman, David M Blei, Chong Wang, and John Paisley. Stochastic variational
+inference. JMLR, 2013.
+
+Alex Holub, Pietro Perona, and Michael C Burl. Entropy-based active learning for
+object recognition. In Computer Vision and Pattern Recognition Workshops, 2008.
+CVPRW’08. IEEE Computer Society Conference on, pages 1–8. IEEE, 2008.
+
+Kurt Hornik. Approximation capabilities of multilayer feedforward networks. Neural
+networks, 4(2):251–257, 1991.
+
+Neil Houlsby, Ferenc Huszár, Zoubin Ghahramani, and Máté Lengyel. Bayesian active
+learning for classification and preference learning. arXiv preprint arXiv:1112.5745,
+2011.
+
+Gao Huang, Yu Sun, Zhuang Liu, Daniel Sedra, and Kilian Weinberger. Deep networks
+with stochastic depth. arXiv preprint arXiv:1603.09382, 2016.
+
+Hemant Ishwaran and J Sunil Rao. Spike and slab variable selection: frequentist and
+Bayesian strategies. Annals of Statistics, pages 730–773, 2005.
+
+Eric Jang, Shixiang Gu, and Ben Poole. Categorical reparameterization with Gumbelsoftmax. In Bayesian Deep Learning workshop, NIPS, 2016.
+
+Chuanyi Ji, Robert R Snapp, and Demetri Psaltis. Generalizing smoothness constraints
+from discrete samples. Neural Computation, 2(2):188–197, 1990.
+
+Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
+Girshick, Sergio Guadarrama, and Trevor Darrell. Caffe: Convolutional architecture
+for fast feature embedding. arXiv preprint arXiv:1408.5093, 2014.
+
+Michael I Jordan, Zoubin Ghahramani, Tommi S Jaakkola, and Lawrence K Saul. An
+introduction to variational methods for graphical models. Machine learning, 37(2):
+183–233, 1999.
+
+Ajay J Joshi, Fatih Porikli, and Nikolaos Papanikolopoulos. Multi-class active learning
+for image classification. In Computer Vision and Pattern Recognition, 2009. CVPR
+2009. IEEE Conference on, pages 2372–2379. IEEE, 2009.
+
+Nal Kalchbrenner and Phil Blunsom. Recurrent continuous translation models. In
+EMNLP, 2013.
+
+Michael Kampffmeyer, Arnt-Borre Salberg, and Robert Jenssen. Semantic segmentation
+of small objects and modeling of uncertainty in urban remote sensing images using
+deep convolutional neural networks. In The IEEE Conference on Computer Vision
+and Pattern Recognition (CVPR) Workshops, June 2016.
+
+A Karpathy et al. A Javascript implementation of neural networks. https://github.com/
+karpathy/convnetjs, 2014–2015.
+
+C.D. Keeling, T.P. Whorf, and the Carbon Dioxide Research Group. Atmospheric
+CO2 concentrations (ppmv) derived from in situ air samples collected at Mauna
+Loa Observatory, Hawaii. Scripps Institution of Oceanography (SIO), University of
+California, La Jolla, California USA 92093-0444, June 2004.
+
+Alex Kendall and Roberto Cipolla. Modelling uncertainty in deep learning for camera
+relocalization. In 2016 IEEE International Conference on Robotics and Automation
+(ICRA), pages 4762–4769. IEEE, 2016.
+
+Alex Kendall, Vijay Badrinarayanan, and Roberto Cipolla. Bayesian segnet: Model
+uncertainty in deep convolutional encoder-decoder architectures for scene understanding.
+arXiv preprint arXiv:1511.02680, 2015.
+
+Diederik P Kingma and Jimmy Ba. Adam: A method for stochastic optimization. arXiv
+preprint arXiv:1412.6980, 2014.
+
+Diederik P Kingma and Max Welling. Auto-encoding variational Bayes. arXiv preprint
+arXiv:1312.6114, 2013.
+
+
+Diederik P Kingma and Max Welling. Stochastic gradient VB and the variational
+auto-encoder. 2nd International Conference on Learning Representationsm (ICLR),
+2014.
+
+Diederik P Kingma, Tim Salimans, and Max Welling. Variational dropout and the local
+reparameterization trick. In NIPS. Curran Associates, Inc., 2015.
+
+Alex Krizhevsky and Geoffrey Hinton. Learning multiple layers of features from tiny
+images. Computer Science Department, University of Toronto, Tech. Rep, 1(4):7, 2009.
+
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton. Imagenet classification with
+deep convolutional neural networks. In Advances in neural information processing
+systems, pages 1097–1105, 2012.
+
+David Krueger, Tegan Maharaj, János Kramár, Mohammad Pezeshki, Nicolas Ballas,
+Nan Rosemary Ke, Anirudh Goyal, Yoshua Bengio, Hugo Larochelle, Aaron Courville,
+et al. Zoneout: Regularizing RNNs by randomly preserving hidden activations. arXiv
+preprint arXiv:1606.01305, 2016.
+
+M Krzywinski and N Altman. Points of significance: Importance of being uncertain.
+Nature methods, 10(9), 2013.
+
+Solomon Kullback. Information theory and statistics. John Wiley & Sons, 1959.
+Solomon Kullback and Richard A Leibler. On information and sufficiency. The annals of
+mathematical statistics, 22(1):79–86, 1951.
+
+Quoc V Le, Alex J Smola, and Stéphane Canu. Heteroscedastic Gaussian process
+regression. In Proceedings of the 22nd international conference on Machine learning,
+pages 489–496. ACM, 2005.
+
+J. Lean. Solar irradiance reconstruction. NOAA/NGDC Paleoclimatology Program,
+Boulder CO, USA, 2004. IGBP PAGES/World Data Center for Paleoclimatology. Data
+Contribution Series 2004-035.
+
+Yann LeCun and Corinna Cortes. The mnist database of handwritten digits, 1998.
+
+Yann LeCun, Bernhard Boser, John S Denker, Donnie Henderson, Richard E Howard,
+Wayne Hubbard, and Lawrence D Jackel. Backpropagation applied to handwritten zip
+code recognition. Neural Computation, 1(4):541–551, 1989.
+
+Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner. Gradient-based learning
+applied to document recognition. Proceedings of the IEEE, 86(11):2278–2324, 1998.
+
+Chen-Yu Lee, Saining Xie, Patrick Gallagher, Zhengyou Zhang, and Zhuowen Tu. Deeplysupervised nets. arXiv preprint arXiv:1409.5185, 2014.
+
+Adrien Marie Legendre. Nouvelles Methodes pour la Determination des Orbites des
+Come’tes. Paris, 1805.
+
+Nicholas Léonard, Sagar Waghmare, and Yang Wang. RNN: Recurrent library for Torch.
+arXiv preprint arXiv:1511.07889, 2015.
+
+Xin Li and Yuhong Guo. Adaptive active learning for image classification. In Proceedings
+of the IEEE Conference on Computer Vision and Pattern Recognition, pages 859–866,
+2013.
+
+Yingzhen Li and Richard E Turner. Variational inference with r\’enyi divergence. arXiv
+preprint arXiv:1602.02311, 2016.
+
+Timothy Lillicrap, Jonathan Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval
+Tassa, David Silver, and Daan Wierstra. Continuous control with deep reinforcement
+learning. arXiv preprint arXiv:1509.02971, 2015.
+
+Min Lin, Qiang Chen, and Shuicheng Yan. Network in network. arXiv preprint
+arXiv:1312.4400, 2013.
+
+O Linda, T Vollmer, and M Manic. Neural network based intrusion detection system for
+critical infrastructures. In Neural Networks, 2009. IJCNN 2009. International Joint
+Conference on. IEEE, 2009.
+
+Christos Louizos. Smart regularization of deep architectures, 2015.
+David MacKay. Bayesian methods for adaptive models. PhD thesis, California Institute
+of Technology, 1992a.
+
+David JC MacKay. A practical Bayesian framework for backpropagation networks. Neural
+Computation, 4(3):448–472, 1992b.
+
+Chris J. Maddison, Andriy Mnih, and Yee Whye Teh. The Concrete distribution:
+A continuous relaxation of discrete random variables. In Bayesian Deep Learning
+workshop, NIPS, 2016.
+
+David Madigan and Adrian E Raftery. Model selection and accounting for model
+uncertainty in graphical models using Occam’s window. Journal of the American
+Statistical Association, 89(428):1535–1546, 1994.
+
+Shin-ichi Maeda. A Bayesian encourages dropout. arXiv preprint arXiv:1412.7003, 2014.
+Andrew McHutchon. Nonlinear modelling and control using Gaussian processes. PhD
+thesis, University of Cambridge, 2014.
+
+Tomáš Mikolov, Martin Karafiát, Lukáš Burget, Jan Černock`y, and Sanjeev Khudanpur.
+Recurrent neural network based language model. In Eleventh Annual Conference of
+the International Speech Communication Association, 2010.
+
+Tom Minka. Divergence measures and message passing. Technical report, Microsoft
+Research, 2005.
+
+Toby J Mitchell and John J Beauchamp. Bayesian variable selection in linear regression.
+Journal of the American Statistical Association, 83(404):1023–1032, 1988.
+
+V Mnih, K Kavukcuoglu, D Silver, A A Rusu, J Veness, et al. Human-level control
+through deep reinforcement learning. Nature, 518(7540):529–533, 2015.
+
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou,
+Daan Wierstra, and Martin Riedmiller. Playing atari with deep reinforcement learning.
+arXiv preprint arXiv:1312.5602, 2013.
+
+Taesup Moon, Heeyoul Choi, Hoshik Lee, and Inchul Song. RnnDrop: A Novel Dropout
+for RNNs in ASR. In ASRU Workshop, 2015.
+
+Radford M Neal. Bayesian learning for neural networks. PhD thesis, University of
+Toronto, 1995.
+
+Radford M Neal. MCMC using Hamiltonian dynamics. Handbook of Markov Chain
+Monte Carlo, 2:113–162, 2011.
+
+Isaac Newton. Philosophiae naturalis principia mathematica, volume Adv.b.39.1. Jussu
+Societatis Regiæ ac Typis Joseph Streater, Londini, 1687. (in Latin).
+
+NHTSA. PE 16-007. Technical report, U.S. Department of Transportation, National
+Highway Traffic Safety Administration, Jan 2017. Tesla Crash Preliminary Evaluation
+Report.
+
+Steven J Nowlan and Geoffrey E Hinton. Simplifying neural networks by soft weightsharing. Neural computation, 4(4):473–493, 1992.
+
+Regina Nuzzo. Statistical errors. Nature, 506(13):150–152, 2014.
+
+Manfred Opper and Cédric Archambeau. The variational Gaussian approximation
+revisited. Neural Computation, 21(3):786–792, 2009.
+
+Ian Osband, Charles Blundell, Alexander Pritzel, and Benjamin Van Roy. Deep exploration via bootstrapped DQN. In Advances In Neural Information Processing Systems,
+pages 4026–4034, 2016.
+
+Marius Pachitariu and Maneesh Sahani. Regularization and nonlinearities for neural
+language models: when are they needed? arXiv preprint arXiv:1301.5650, 2013.
+
+John Paisley, David Blei, and Michael Jordan. Variational Bayesian inference with
+stochastic search. ICML, 2012.
+
+Vu Pham, Theodore Bluche, Christopher Kermorvant, and Jerome Louradour. Dropout
+improves recurrent neural networks for handwriting recognition. In ICFHR. IEEE,
+2014.
+
+Ofir Press and Lior Wolf. Using the output embedding to improve language models.
+arXiv preprint arXiv:1608.05859, 2016.
+
+Carl Edward Rasmussen and Christopher K. I. Williams. Gaussian Processes for Machine
+Learning (Adaptive Computation and Machine Learning). The MIT Press, 2006. ISBN
+026218253X.
+
+Alfréd Rényi et al. On measures of entropy and information. In Proceedings of the
+Fourth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1:
+Contributions to the Theory of Statistics. The Regents of the University of California,
+1961.
+
+Danilo Jimenez Rezende, Shakir Mohamed, and Daan Wierstra. Stochastic backpropagation and approximate inference in deep generative models. In ICML, 2014.
+
+Herbert Robbins and Sutton Monro. A stochastic approximation method. The annals of
+mathematical statistics, pages 400–407, 1951.
+
+Donald B Rubin. The Bayesian bootstrap. The annals of statistics, 9(1):130–134, 1981.
+
+David E Rumelhart, Geoffrey E Hinton, and Ronald J Williams. Learning internal
+representations by error propagation. Technical report, DTIC Document, 1985.
+
+Masa-Aki Sato. Online model selection based on the variational Bayes. Neural Computation, 13(7):1649–1681, 2001.
+
+John Schulman, Nicolas Heess, Theophane Weber, and Pieter Abbeel. Gradient estimation
+using stochastic computation graphs. In Advances in Neural Information Processing
+Systems, pages 3528–3536, 2015.
+
+Hilary L Seal. Studies in the history of probability and statistics. XXIX – The discovery
+of the method of least squares. Biometrika, 54(1-2):1–24, 1967.
+
+Rico Sennrich, Barry Haddow, and Alexandra Birch. Edinburgh neural machine translation systems for wmt 16. In Proceedings of the First Conference on Machine Translation,
+pages 371–376, Berlin, Germany, August 2016. Association for Computational Linguistics.
+
+Burr Settles. Active learning literature survey. University of Wisconsin, Madison, 52
+(55-66):11, 2010.
+
+Claude Elwood Shannon. A mathematical theory of communication. Bell System
+Technical Journal, 27(3):379–423, 1948.
+
+Saurabh Singh, Derek Hoiem, and David Forsyth. Swapout: Learning an ensemble of
+deep architectures. NIPS, 2016.
+
+Kirstine Smith. On the standard deviations of adjusted and interpolated values of an
+observed polynomial function and its constants and the guidance they give towards a
+proper choice of the distribution of the observations. Biometrika, 12:1–85, 1918.
+
+Edward Snelson and Zoubin Ghahramani. Sparse Gaussian processes using pseudo-inputs.
+In Advances in neural information processing systems, pages 1257–1264, 2005.
+
+Jasper Snoek, Hugo Larochelle, and Ryan P Adams. Practical Bayesian optimization of
+machine learning algorithms. In Advances in Neural Information Processing Systems,
+pages 2951–2959, 2012.
+
+Jasper Snoek et al. Spearmint. https://github.com/JasperSnoek/spearmint, 2015.
+
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdinov. Dropout: A simple way to prevent neural networks from overfitting. JMLR,
+2014.
+
+
+Bradly C Stadie, Sergey Levine, and Pieter Abbeel. Incentivizing exploration in reinforcement learning with deep predictive models. arXiv preprint arXiv:1507.00814,
+2015.
+
+Martin Sundermeyer, Ralf Schlüter, and Hermann Ney. LSTM neural networks for
+language modeling. In INTERSPEECH, 2012.
+
+Ilya Sutskever, Oriol Vinyals, and Quoc VV Le. Sequence to sequence learning with
+neural networks. In NIPS, 2014.
+
+Richard Sutton and Andrew Barto. Reinforcement learning: An introduction. MIT press,
+1998.
+
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
+Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich. Going deeper
+with convolutions. arXiv preprint arXiv:1409.4842, 2014.
+
+William R Thompson. On the likelihood that one unknown probability exceeds another
+in view of the evidence of two samples. Biometrika, pages 285–294, 1933.
+
+Naftali Tishby, Esther Levin, and Sara A Solla. Consistent inference of probabilities in
+layered networks: Predictions and generalizations. In Neural Networks, 1989. IJCNN.,
+International Joint Conference on, pages 403–409. IEEE, 1989.
+
+Michalis Titsias and Miguel Lázaro-Gredilla. Doubly stochastic variational Bayes for nonconjugate inference. In Proceedings of the 31st International Conference on Machine
+Learning (ICML-14), pages 1971–1979, 2014.
+
+Michalis K Titsias and Miguel Lázaro-Gredilla. Spike and slab variational inference for
+multi-task and multiple kernel learning. In Advances in neural information processing
+systems, pages 2339–2347, 2011.
+
+D Trafimow and M Marks. Editorial. Basic and Applied Social Psychology, 37(1), 2015.
+
+R. E. Turner and M. Sahani. Two problems with variational expectation maximisation
+for time-series models. In Bayesian Time series models, chapter 5, pages 109–130.
+Cambridge University Press, 2011.
+
+Stefan Wager, Sida Wang, and Percy S Liang. Dropout training as adaptive regularization.
+In Advances in Neural Information Processing Systems, pages 351–359, 2013.
+
+L Wan, M Zeiler, S Zhang, Y LeCun, and R Fergus. Regularization of neural networks
+using dropconnect. In ICML-13, 2013.
+
+S Wang and C Manning. Fast dropout training. ICML, 2013.
+
+Andreas S Weigend, David E Rumelhart, and Bernardo A Huberman. Generalization by
+weight-elimination with application to forecasting. In Advances in Neural Information
+Processing Systems, pages 875–882, 1991.
+
+Max Welling and Yee W Teh. Bayesian learning via stochastic gradient langevin dynamics.
+In Proceedings of the 28th International Conference on Machine Learning (ICML-11),
+pages 681–688, 2011.
+
+Paul J Werbos. Generalization of backpropagation with application to a recurrent gas
+market model. Neural Networks, 1(4):339–356, 1988.
+
+Christopher KI Williams. Computing with infinite networks. Advances in neural information processing systems, pages 295–301, 1997.
+
+Ronald J Williams. Simple statistical gradient-following algorithms for connectionist
+reinforcement learning. Machine learning, 8(3-4):229–256, 1992.
+
+John Winn and Christopher M Bishop. Variational message passing. Journal of Machine
+Learning Research, 6(Apr):661–694, 2005.
+
+Xiao Yang, Roland Kwitt, and Marc Niethammer. Fast predictive image registration.
+arXiv preprint arXiv:1607.02504, 2016.
+
+Wojciech Zaremba, Ilya Sutskever, and Oriol Vinyals. Recurrent neural network regularization. arXiv preprint arXiv:1409.2329, 2014.
+
+Xiaojin Zhu, John Lafferty, and Zoubin Ghahramani. Combining active learning and
+semi-supervised learning using Gaussian fields and harmonic functions. In ICML 2003
+workshop on The Continuum from Labeled to Unlabeled Data in Machine Learning and
+Data Mining, 2003.
